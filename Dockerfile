@@ -43,7 +43,7 @@ RUN pip install pip pipenv --upgrade
 
 # tensorflow (including Keras)
 RUN pip install flask
-RUN pip install tensorflow keras
+#RUN pip install tensorflow keras
 
 # pytorch (cpu)
 RUN apt-get update && apt-get -y install gcc mono-mcs && rm -rf /var/lib/apt/lists/*

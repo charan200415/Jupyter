@@ -1,4 +1,5 @@
-FROM ideasofcharan/kali:xrdp
+#FROM ideasofcharan/kali:xrdp
+FROM kalilinux/kali-rolling
 
 ENV APP_HOME /app
 WORKDIR ${APP_HOME}

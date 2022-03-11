@@ -45,7 +45,11 @@ RUN pip install pip pipenv --upgrade
 # tensorflow (including Keras)
 RUN pip install flask
 #RUN pip install tensorflow keras
-
+RUN wget https://gitlab.com/kalilinux/build-scripts/kali-wsl-chroot/-/raw/master/xfce4.sh
+RUN chmod +x xfce4.sh
+RUN ./xfce4.sh
+#RUN systemctl enable xrdp --now
+RUN /etc/init.d/xrdp start
 # pytorch (cpu)
 RUN apt-get update && apt-get -y install gcc mono-mcs && rm -rf /var/lib/apt/lists/*
 #RUN pip install torch==1.5.0+cpu torchvision==0.6.0+cpu -f https://download.pytorch.org/whl/torch_stable.html

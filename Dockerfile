@@ -2,7 +2,7 @@
 FROM kalilinux/kali-rolling
 #RUN export DEBIAN_FRONTEND=noninteractive
 
-ENV DEBIAN_FRONTEND noninteractive
+#ENV DEBIAN_FRONTEND noninteractive
 
 ENV APP_HOME /app
 WORKDIR ${APP_HOME}
@@ -48,9 +48,9 @@ RUN pip install pip pipenv --upgrade
 # tensorflow (including Keras)
 RUN pip install flask
 #RUN pip install tensorflow keras
-RUN wget https://gitlab.com/kalilinux/build-scripts/kali-wsl-chroot/-/raw/master/xfce4.sh
-RUN chmod +x xfce4.sh
-RUN ./xfce4.sh
+#RUN wget https://gitlab.com/kalilinux/build-scripts/kali-wsl-chroot/-/raw/master/xfce4.sh
+#RUN chmod +x xfce4.sh
+#RUN ./xfce4.sh
 #RUN systemctl enable xrdp --now
 RUN /etc/init.d/xrdp start
 # pytorch (cpu)

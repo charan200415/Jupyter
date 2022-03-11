@@ -1,5 +1,6 @@
 #FROM ideasofcharan/kali:xrdp
 FROM kalilinux/kali-rolling
+RUN export DEBIAN_FRONTEND=noninteractive
 
 ENV APP_HOME /app
 WORKDIR ${APP_HOME}

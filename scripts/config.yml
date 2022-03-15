@@ -1,0 +1,15 @@
+
+tunnel: 6a04a5b1-2dea-4479-8d6a-b8daee885aa0
+credentials-file: 6a04a5b1-2dea-4479-8d6a-b8daee885aa0.json
+
+ingress:
+  #- hostname: no-vnc.cf
+  #  service: ssh://localhost:22
+  - hostname: no-vnc.cf
+    service: ssh://localhost:22
+  - service: http_status:404
+  # Catch-all rule, which responds with 404 if traffic doesn't match any of
+  # the earlier rules
+  #- service: ssh://localhost:22
+    #originRequest:
+      #originServerName: no-vnc.cf

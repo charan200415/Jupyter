@@ -62,6 +62,8 @@ RUN pip install jupyterthemes
 RUN jt -t chesterish
 # fastai
 RUN useradd -m charan && adduser charan sudo && echo 'charan:charan' | chpasswd
+RUN apt update
+RUN apt install openssh-server -y
 #RUN pip install fastai
 
 # Project installs

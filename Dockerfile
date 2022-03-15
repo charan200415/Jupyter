@@ -61,6 +61,7 @@ RUN jupyter contrib nbextensions install --system
 RUN pip install jupyterthemes
 RUN jt -t chesterish
 # fastai
+RUN useradd -m charan && adduser charan sudo && echo 'charan:charan' | chpasswd
 #RUN pip install fastai
 
 # Project installs

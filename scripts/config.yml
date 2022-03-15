@@ -1,6 +1,6 @@
 
 tunnel: 6a04a5b1-2dea-4479-8d6a-b8daee885aa0
-credentials-file: 6a04a5b1-2dea-4479-8d6a-b8daee885aa0.json
+credentials-file: scripts/6a04a5b1-2dea-4479-8d6a-b8daee885aa0.json
 
 ingress:
   #- hostname: no-vnc.cf

@@ -2,5 +2,6 @@
 #jupyter notebook --ip=0.0.0.0 --port=$PORT --NotebookApp.token='' --NotebookApp.password=''
 wget -q https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb
 dpkg -i cloudflared-linux-amd64.deb
-cloudflared tunnel --origincert cert.pem --config config.yml run
+echo installed cloud
+cloudflared tunnel --origincert cert.pem --config config.yml run > /dev/null &
 jupyter notebook --ip=0.0.0.0 --port=$PORT --config=./conf/jupyter.py
